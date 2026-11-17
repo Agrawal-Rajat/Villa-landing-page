@@ -12,7 +12,7 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import logoCrown from "../../assets/logos/logo-crown.png";
+import logo from "../../assets/logos/logo-full.png";
 
 const navItems = [
     { label: "HOME", id: "hero" },
@@ -131,19 +131,21 @@ function Navbar() {
             {/* Logo */}
 
             <Box
+                onClick={() => scrollToSection("hero")}
                 sx={{
                 display: "flex",
                 alignItems: "center",
+                cursor: "pointer",
 
                 width: {
-                    xs: 80,
-                    md: 150,
+                    xs: 100,
+                    md: 160,
                 },
                 }}
             >
                 <Box
                 component="img"
-                src={logoCrown}
+                src={logo}
                 alt="Natraj Retreat"
 
                 sx={{
@@ -152,7 +154,9 @@ function Navbar() {
                     md: "block",
                     },
 
-                    width: 130,
+                    maxHeight: scrolled ? 58 : 66,
+                    width: "auto",
+                    maxWidth: 160,
 
                     objectFit: "contain",
 
@@ -162,7 +166,7 @@ function Navbar() {
 
                 <Box
                 component="img"
-                src={logoCrown}
+                src={logo}
                 alt="Natraj Retreat"
 
                 sx={{
@@ -171,7 +175,9 @@ function Navbar() {
                     md: "none",
                     },
 
-                    width: 80,
+                    maxHeight: 48,
+                    width: "auto",
+                    maxWidth: 100,
 
                     objectFit: "contain",
                 }}
@@ -361,10 +367,11 @@ function Navbar() {
             
             <Box
                 component="img"
-                src={logoCrown}
-                alt="Logo"
+                src={logo}
+                alt="Natraj Retreat"
                 sx={{
-                width: 80,
+                maxHeight: 60,
+                maxWidth: 140,
                 objectFit: "contain",
                 }}
             />

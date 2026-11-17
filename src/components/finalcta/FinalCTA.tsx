@@ -318,7 +318,12 @@ function Footer() {
                             alt="Natraj Retreat"
 
                             sx={{
-                                width: 190,
+                                width: {
+                                    xs: 200,
+                                    md: 240,
+                                },
+                                maxWidth: "100%",
+                                objectFit: "contain",
 
                                 mb: 4,
                             }}
